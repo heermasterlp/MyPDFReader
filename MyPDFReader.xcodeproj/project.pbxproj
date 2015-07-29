@@ -14,6 +14,11 @@
 		64860C251B677E430065AAF3 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64860C241B677E430065AAF3 /* Images.xcassets */; };
 		64860C281B677E430065AAF3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64860C261B677E430065AAF3 /* LaunchScreen.xib */; };
 		64860C341B677E430065AAF3 /* MyPDFReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860C331B677E430065AAF3 /* MyPDFReaderTests.swift */; };
+		64860C3E1B6783240065AAF3 /* PDFTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860C3D1B6783240065AAF3 /* PDFTableController.swift */; };
+		64860C401B6784250065AAF3 /* 0001.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 64860C3F1B6784250065AAF3 /* 0001.pdf */; };
+		64860C431B6895FA0065AAF3 /* iPhone 6 Size Comparison.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 64860C411B6895FA0065AAF3 /* iPhone 6 Size Comparison.pdf */; };
+		64860C441B6895FA0065AAF3 /* iPhone6_preorder_picker.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 64860C421B6895FA0065AAF3 /* iPhone6_preorder_picker.pdf */; };
+		64860C461B689C8D0065AAF3 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860C451B689C8D0065AAF3 /* DetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +43,11 @@
 		64860C2D1B677E430065AAF3 /* MyPDFReaderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyPDFReaderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		64860C321B677E430065AAF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64860C331B677E430065AAF3 /* MyPDFReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPDFReaderTests.swift; sourceTree = "<group>"; };
+		64860C3D1B6783240065AAF3 /* PDFTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFTableController.swift; sourceTree = "<group>"; };
+		64860C3F1B6784250065AAF3 /* 0001.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 0001.pdf; sourceTree = "<group>"; };
+		64860C411B6895FA0065AAF3 /* iPhone 6 Size Comparison.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iPhone 6 Size Comparison.pdf"; sourceTree = "<group>"; };
+		64860C421B6895FA0065AAF3 /* iPhone6_preorder_picker.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = iPhone6_preorder_picker.pdf; sourceTree = "<group>"; };
+		64860C451B689C8D0065AAF3 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +92,8 @@
 				64860C1A1B677E430065AAF3 /* AppDelegate.swift */,
 				64860C1F1B677E430065AAF3 /* ViewController.swift */,
 				64860C211B677E430065AAF3 /* Main.storyboard */,
+				64860C3D1B6783240065AAF3 /* PDFTableController.swift */,
+				64860C451B689C8D0065AAF3 /* DetailsViewController.swift */,
 				64860C241B677E430065AAF3 /* Images.xcassets */,
 				64860C261B677E430065AAF3 /* LaunchScreen.xib */,
 				64860C1C1B677E430065AAF3 /* MyPDFReader.xcdatamodeld */,
@@ -93,6 +105,9 @@
 		64860C181B677E430065AAF3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				64860C411B6895FA0065AAF3 /* iPhone 6 Size Comparison.pdf */,
+				64860C421B6895FA0065AAF3 /* iPhone6_preorder_picker.pdf */,
+				64860C3F1B6784250065AAF3 /* 0001.pdf */,
 				64860C191B677E430065AAF3 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -196,6 +211,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				64860C231B677E430065AAF3 /* Main.storyboard in Resources */,
+				64860C441B6895FA0065AAF3 /* iPhone6_preorder_picker.pdf in Resources */,
+				64860C431B6895FA0065AAF3 /* iPhone 6 Size Comparison.pdf in Resources */,
+				64860C401B6784250065AAF3 /* 0001.pdf in Resources */,
 				64860C281B677E430065AAF3 /* LaunchScreen.xib in Resources */,
 				64860C251B677E430065AAF3 /* Images.xcassets in Resources */,
 			);
@@ -216,8 +234,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				64860C201B677E430065AAF3 /* ViewController.swift in Sources */,
+				64860C3E1B6783240065AAF3 /* PDFTableController.swift in Sources */,
 				64860C1B1B677E430065AAF3 /* AppDelegate.swift in Sources */,
 				64860C1E1B677E430065AAF3 /* MyPDFReader.xcdatamodeld in Sources */,
+				64860C461B689C8D0065AAF3 /* DetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
