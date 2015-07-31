@@ -19,6 +19,7 @@
 		64860C431B6895FA0065AAF3 /* iPhone 6 Size Comparison.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 64860C411B6895FA0065AAF3 /* iPhone 6 Size Comparison.pdf */; };
 		64860C441B6895FA0065AAF3 /* iPhone6_preorder_picker.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 64860C421B6895FA0065AAF3 /* iPhone6_preorder_picker.pdf */; };
 		64860C461B689C8D0065AAF3 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860C451B689C8D0065AAF3 /* DetailsViewController.swift */; };
+		64860C7A1B6B7D050065AAF3 /* PDFViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860C791B6B7D050065AAF3 /* PDFViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,7 @@
 		64860C411B6895FA0065AAF3 /* iPhone 6 Size Comparison.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iPhone 6 Size Comparison.pdf"; sourceTree = "<group>"; };
 		64860C421B6895FA0065AAF3 /* iPhone6_preorder_picker.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = iPhone6_preorder_picker.pdf; sourceTree = "<group>"; };
 		64860C451B689C8D0065AAF3 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		64860C791B6B7D050065AAF3 /* PDFViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				64860C781B6B58870065AAF3 /* Documents */,
 				64860C211B677E430065AAF3 /* Main.storyboard */,
 				64860C3D1B6783240065AAF3 /* PDFTableController.swift */,
+				64860C791B6B7D050065AAF3 /* PDFViewCell.swift */,
 				64860C451B689C8D0065AAF3 /* DetailsViewController.swift */,
 				64860C241B677E430065AAF3 /* Images.xcassets */,
 				64860C261B677E430065AAF3 /* LaunchScreen.xib */,
@@ -246,6 +249,7 @@
 				64860C1B1B677E430065AAF3 /* AppDelegate.swift in Sources */,
 				64860C1E1B677E430065AAF3 /* MyPDFReader.xcdatamodeld in Sources */,
 				64860C461B689C8D0065AAF3 /* DetailsViewController.swift in Sources */,
+				64860C7A1B6B7D050065AAF3 /* PDFViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
