@@ -10,11 +10,11 @@ import UIKit
 
 class PDFTableController: UITableViewController {
     
-    var pdfFiles: [String] = []
+    var pdfFiles: [String] = [] // All pdf file name
     
     let fm = NSFileManager.defaultManager()
     
-    let mainPath = NSBundle.mainBundle().resourcePath!
+    let mainPath = NSBundle.mainBundle().resourcePath! // Documents directory
     
     @IBOutlet var tvPDFs: UITableView!
     
@@ -75,7 +75,7 @@ class PDFTableController: UITableViewController {
         return cell
     }
     
-    // Get list of PDFs
+    /* Get list of PDFs */
     func listPDFFiles() -> [String] {
         
         var items = fm.contentsOfDirectoryAtPath(mainPath, error: nil) as! [String]
@@ -83,11 +83,10 @@ class PDFTableController: UITableViewController {
         
         for item in items {
             if item.hasSuffix("pdf") {
-                
+                // Add the file name
                 result.append((item as NSString).substringWithRange(NSMakeRange(0, count(item) - 4)))
             }
         }
-        
         return result
     }
 

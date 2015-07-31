@@ -91,6 +91,7 @@
 			children = (
 				64860C1A1B677E430065AAF3 /* AppDelegate.swift */,
 				64860C1F1B677E430065AAF3 /* ViewController.swift */,
+				64860C781B6B58870065AAF3 /* Documents */,
 				64860C211B677E430065AAF3 /* Main.storyboard */,
 				64860C3D1B6783240065AAF3 /* PDFTableController.swift */,
 				64860C451B689C8D0065AAF3 /* DetailsViewController.swift */,
@@ -105,9 +106,6 @@
 		64860C181B677E430065AAF3 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				64860C411B6895FA0065AAF3 /* iPhone 6 Size Comparison.pdf */,
-				64860C421B6895FA0065AAF3 /* iPhone6_preorder_picker.pdf */,
-				64860C3F1B6784250065AAF3 /* 0001.pdf */,
 				64860C191B677E430065AAF3 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -128,6 +126,16 @@
 				64860C321B677E430065AAF3 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		64860C781B6B58870065AAF3 /* Documents */ = {
+			isa = PBXGroup;
+			children = (
+				64860C411B6895FA0065AAF3 /* iPhone 6 Size Comparison.pdf */,
+				64860C421B6895FA0065AAF3 /* iPhone6_preorder_picker.pdf */,
+				64860C3F1B6784250065AAF3 /* 0001.pdf */,
+			);
+			name = Documents;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

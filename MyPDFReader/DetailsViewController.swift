@@ -11,10 +11,12 @@ import UIKit
 class DetailsViewController: UIViewController {
 
     @IBOutlet var detailsWebView: UIWebView!
+    @IBOutlet var previousPDFFileButton: UIBarButtonItem! // Previous pdf file button
+    @IBOutlet var nextPDFFileButton: UIBarButtonItem! // Next pdf file button
     
     var fileName = ""
     var allPDFFiles: [String] = []
-    var indexOfPDF = 0
+    var indexOfPDF = 0 // The index of pdf file
     
     // Gesture paramers
     var lastScaleFactor: CGFloat! = 1 // Enlarge or redcue
@@ -42,7 +44,7 @@ class DetailsViewController: UIViewController {
     func displayPDFFile() {
         
         // Set the title of view controller
-        self.title = "\(allPDFFiles[indexOfPDF] as String ) (\(self.indexOfPDF + 1)/ \(self.allPDFFiles.count))"
+        self.title = "\(allPDFFiles[indexOfPDF] as String ) (\(self.indexOfPDF + 1) / \(self.allPDFFiles.count))"
         
         // load the pdf file
         if let pdfPath = NSBundle.mainBundle().pathForResource(allPDFFiles[indexOfPDF], ofType: "pdf"){
@@ -53,8 +55,7 @@ class DetailsViewController: UIViewController {
         
     }
     
-    @IBOutlet var previousPDFFileButton: UIBarButtonItem!
-    @IBOutlet var nextPDFFileButton: UIBarButtonItem!
+   
     // Previous pdf file
     @IBAction func previousPDFFileClicked(sender: UIBarButtonItem) {
         nextPDFFileButton.enabled = true
