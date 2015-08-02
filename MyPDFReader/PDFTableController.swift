@@ -22,6 +22,7 @@ class PDFTableController: UITableViewController, UISearchBarDelegate {
     @IBOutlet var tvPDFs: UITableView!
     
     @IBOutlet var searchBar: UISearchBar!
+    
     // View did load
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,7 +59,6 @@ class PDFTableController: UITableViewController, UISearchBarDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    
     /* Get list of PDFs */
     func listPDFFiles() -> [String] {
         
@@ -77,7 +77,6 @@ class PDFTableController: UITableViewController, UISearchBarDelegate {
     }
     
     // MARK: - Table view data source
-    
     override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         // #warning Potentially incomplete method implementation.
         // Return the number of sections.
@@ -104,53 +103,11 @@ class PDFTableController: UITableViewController, UISearchBarDelegate {
         if let pdfPath = NSBundle.mainBundle().pathForResource(pdfName, ofType: "pdf"){
             
             let pdfUrl = NSURL.fileURLWithPath(pdfPath)
-            cell.pdfThumbnailsImage.image = getThumbnail(pdfUrl!, pageNumber: 1)
+            cell.pdfThumbnailsImage.image = PDFUtil.getThumbnail(pdfUrl!, pageNumber: 1)
         }
         
         return cell
     }
-    
-    
-    /* Get the thumbnails of pdf  */
-    func getThumbnail(url:NSURL, pageNumber:Int) -> UIImage {
-        
-        var pdf: CGPDFDocumentRef = CGPDFDocumentCreateWithURL(url as CFURLRef)
-        
-        var firstPage = CGPDFDocumentGetPage(pdf, pageNumber)
-        
-        // Change the width of the thumbnail here
-        var width: CGFloat = 240.0
-        
-        var pageRect: CGRect = CGPDFPageGetBoxRect(firstPage, kCGPDFMediaBox)
-        var pdfScale: CGFloat = width / pageRect.size.width
-        pageRect.size = CGSizeMake(pageRect.size.width * pdfScale, pageRect.size.height * pdfScale)
-        pageRect.origin = CGPointZero
-        
-        UIGraphicsBeginImageContext(pageRect.size)
-        
-        var context: CGContextRef = UIGraphicsGetCurrentContext()
-        
-        // White BG
-        CGContextSetRGBFillColor(context, 1.0, 1.0, 1.0, 1.0)
-        CGContextFillRect(context, pageRect)
-        
-        CGContextSaveGState(context)
-        
-        // Next 3 lines makes the rorations so that the page look in the right direcitons
-        CGContextTranslateCTM(context, 0.0, pageRect.size.height)
-        CGContextScaleCTM(context, 1.0, -1.0)
-        CGContextConcatCTM(context, CGPDFPageGetDrawingTransform(firstPage, kCGPDFMediaBox, pageRect, 0, true))
-        
-        CGContextDrawPDFPage(context, firstPage)
-        CGContextRestoreGState(context)
-        
-        var thm: UIImage = UIGraphicsGetImageFromCurrentImageContext()
-        
-        UIGraphicsEndImageContext()
-        
-        return thm
-    }
-
     
     /* Search Bar Actions */
     
