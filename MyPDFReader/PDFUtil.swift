@@ -50,5 +50,27 @@ class PDFUtil {
         
         return thm
     }
+    
+    /* Get the list of pdf in the Document */
+    class func getListOfPDFFiles() -> [String] {
+        
+        let fm = NSFileManager.defaultManager()
+        
+        let mainPath = NSBundle.mainBundle().resourcePath! // Documents directory
+        
+        var result: [String] = []
+        if let items = fm.contentsOfDirectoryAtPath(mainPath, error: nil) as? [String] {
+            for item in items {
+                if item.hasSuffix("pdf") {
+                    // Add the file name
+                    result.append((item as NSString).substringWithRange(NSMakeRange(0, count(item) - 4)))
+                }
+            }
+        } else {
+            println("No pdf files existed!")
+        }
+        return result
+
+    }
 
 }

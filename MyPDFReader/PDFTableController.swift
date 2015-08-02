@@ -31,7 +31,8 @@ class PDFTableController: UITableViewController, UISearchBarDelegate {
         searchBar.delegate = self
         
         // 1. Get the list of PDFs
-        pdfFiles = listPDFFiles()
+//        pdfFiles = listPDFFiles()
+        pdfFiles = PDFUtil.getListOfPDFFiles()
         
     }
     

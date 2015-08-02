@@ -64,6 +64,62 @@
             </objects>
             <point key="canvasLocation" x="-131.5" y="358.5"/>
         </scene>
+        <!--Collection View Controller-->
+        <scene sceneID="S1v-mr-ZPa">
+            <objects>
+                <collectionViewController id="mn3-RT-Eh9" customClass="PDFCollectionViewController" customModule="MyPDFReader" customModuleProvider="target" sceneMemberID="viewController">
+                    <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="dN6-G4-2lc">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="grW-hX-lJr">
+                            <size key="itemSize" width="100" height="120"/>
+                            <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                            <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                            <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                        </collectionViewFlowLayout>
+                        <cells>
+                            <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PDFCollectionCell" id="sS1-n6-JIg" customClass="PDFCollectionCell" customModule="MyPDFReader" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kTL-tg-lFW">
+                                            <rect key="frame" x="8" y="99" width="84" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oaE-nz-D0r">
+                                            <rect key="frame" x="8" y="8" width="84" height="83"/>
+                                        </imageView>
+                                    </subviews>
+                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                </view>
+                                <connections>
+                                    <outlet property="pdfNameLabel" destination="kTL-tg-lFW" id="3SS-jM-JOl"/>
+                                    <outlet property="pdfThmImageView" destination="oaE-nz-D0r" id="y7B-hD-tyL"/>
+                                </connections>
+                            </collectionViewCell>
+                        </cells>
+                        <connections>
+                            <outlet property="dataSource" destination="mn3-RT-Eh9" id="wAs-D2-JgF"/>
+                            <outlet property="delegate" destination="mn3-RT-Eh9" id="5Xx-Io-jie"/>
+                        </connections>
+                    </collectionView>
+                    <navigationItem key="navigationItem" id="eIp-Jg-9Kx"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="pdfCollectionView" destination="dN6-G4-2lc" id="sId-J6-en4"/>
+                        <outlet property="uiCollectionView" destination="dN6-G4-2lc" id="ATh-wZ-dZl"/>
+                    </connections>
+                </collectionViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8gC-ca-WPQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-139.5" y="1087.5"/>
+        </scene>
         <!--Details View Controller-->
         <scene sceneID="KMd-cY-cKq">
             <objects>
@@ -128,6 +184,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wV0-JE-7Td" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-653.5" y="358.5"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="PSm-Wf-skq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qj9-Dd-F1X" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="fnj-8d-zS1">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mn3-RT-Eh9" kind="relationship" relationship="rootViewController" id="H5h-Fw-L4R"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="nKw-Tm-PwQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-653.5" y="1087.5"/>
         </scene>
     </scenes>
 </document>
