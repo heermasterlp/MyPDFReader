@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>200B15DC-E1EB-4DE5-9B1C-EFFB3129AFE0</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>MyPDFReader</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>C552DCB06959C99A5A6C640536DA7F58B38F0CA6</key>
 		<string>https://github.com/heermasterlp/MyPDFReader.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>MyPDFReader.xcodeproj/project.xcworkspace</string>
+	<string>MyPDFReader.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>C552DCB06959C99A5A6C640536DA7F58B38F0CA6</key>

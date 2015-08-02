@@ -9,10 +9,9 @@
 import UIKit
 
 class PDFViewCell: UITableViewCell {
-    
-   
-    @IBOutlet var uiwebView: UIWebView!
 
+    @IBOutlet var pdfThumbnailsImage: UIImageView!
+    
     @IBOutlet var pdfLabel: UILabel!
     
     override func awakeFromNib() {

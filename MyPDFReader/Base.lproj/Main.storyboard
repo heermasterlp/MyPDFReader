@@ -23,10 +23,9 @@
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wg0-Bc-zqN" id="8va-7l-n3N">
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="cqy-LB-BWd">
-                                            <rect key="frame" x="-222" y="-17" width="285" height="60"/>
-                                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        </webView>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="L3b-ag-lnl">
+                                            <rect key="frame" x="8" y="0.0" width="47" height="35"/>
+                                        </imageView>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WjU-0g-Pz3">
                                             <rect key="frame" x="99" y="14" width="268" height="21"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -37,7 +36,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="pdfLabel" destination="WjU-0g-Pz3" id="cGJ-Ku-HOq"/>
-                                    <outlet property="uiwebView" destination="8va-7l-n3N" id="hkf-Xl-pjI"/>
+                                    <outlet property="pdfThumbnailsImage" destination="L3b-ag-lnl" id="58a-M1-VyP"/>
                                     <segue destination="ieL-Lx-mEw" kind="show" identifier="PDFFileContents" id="qXN-5i-dWi"/>
                                 </connections>
                             </tableViewCell>
