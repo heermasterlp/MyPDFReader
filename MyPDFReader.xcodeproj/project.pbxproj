@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		644C4A111B6F027900AA95B1 /* PDFCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644C4A101B6F027900AA95B1 /* PDFCollectionViewController.swift */; };
+		644C4A131B6F029900AA95B1 /* PDFCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644C4A121B6F029900AA95B1 /* PDFCollectionCell.swift */; };
+		644C4A1F1B6F660E00AA95B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644C4A1E1B6F660E00AA95B1 /* MainViewController.swift */; };
 		64860C1B1B677E430065AAF3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860C1A1B677E430065AAF3 /* AppDelegate.swift */; };
 		64860C1E1B677E430065AAF3 /* MyPDFReader.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64860C1C1B677E430065AAF3 /* MyPDFReader.xcdatamodeld */; };
 		64860C201B677E430065AAF3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860C1F1B677E430065AAF3 /* ViewController.swift */; };
@@ -21,8 +24,6 @@
 		64860C461B689C8D0065AAF3 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860C451B689C8D0065AAF3 /* DetailsViewController.swift */; };
 		64860C7A1B6B7D050065AAF3 /* PDFViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860C791B6B7D050065AAF3 /* PDFViewCell.swift */; };
 		64B5B4FD1B6E2C11000005F4 /* PDFUtil.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B5B4FC1B6E2C11000005F4 /* PDFUtil.swift */; };
-		64B5B4FF1B6E31EA000005F4 /* PDFCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B5B4FE1B6E31EA000005F4 /* PDFCollectionViewController.swift */; };
-		64B5B5011B6E3D18000005F4 /* PDFCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64B5B5001B6E3D18000005F4 /* PDFCollectionCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		644C4A101B6F027900AA95B1 /* PDFCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFCollectionViewController.swift; path = ../PDFCollectionViewController.swift; sourceTree = "<group>"; };
+		644C4A121B6F029900AA95B1 /* PDFCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFCollectionCell.swift; path = ../PDFCollectionCell.swift; sourceTree = "<group>"; };
+		644C4A1E1B6F660E00AA95B1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		64860C151B677E430065AAF3 /* MyPDFReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPDFReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64860C191B677E430065AAF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64860C1A1B677E430065AAF3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -54,8 +58,6 @@
 		64860C451B689C8D0065AAF3 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		64860C791B6B7D050065AAF3 /* PDFViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFViewCell.swift; sourceTree = "<group>"; };
 		64B5B4FC1B6E2C11000005F4 /* PDFUtil.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFUtil.swift; sourceTree = "<group>"; };
-		64B5B4FE1B6E31EA000005F4 /* PDFCollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFCollectionViewController.swift; sourceTree = "<group>"; };
-		64B5B5001B6E3D18000005F4 /* PDFCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFCollectionCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,10 +101,11 @@
 			children = (
 				64860C1A1B677E430065AAF3 /* AppDelegate.swift */,
 				64860C1F1B677E430065AAF3 /* ViewController.swift */,
+				644C4A1E1B6F660E00AA95B1 /* MainViewController.swift */,
 				64860C781B6B58870065AAF3 /* Documents */,
 				64860C211B677E430065AAF3 /* Main.storyboard */,
-				64B5B4FE1B6E31EA000005F4 /* PDFCollectionViewController.swift */,
-				64B5B5001B6E3D18000005F4 /* PDFCollectionCell.swift */,
+				644C4A101B6F027900AA95B1 /* PDFCollectionViewController.swift */,
+				644C4A121B6F029900AA95B1 /* PDFCollectionCell.swift */,
 				64860C3D1B6783240065AAF3 /* PDFTableController.swift */,
 				64860C791B6B7D050065AAF3 /* PDFViewCell.swift */,
 				64B5B4FC1B6E2C11000005F4 /* PDFUtil.swift */,
@@ -256,12 +259,13 @@
 				64860C201B677E430065AAF3 /* ViewController.swift in Sources */,
 				64860C3E1B6783240065AAF3 /* PDFTableController.swift in Sources */,
 				64860C1B1B677E430065AAF3 /* AppDelegate.swift in Sources */,
-				64B5B4FF1B6E31EA000005F4 /* PDFCollectionViewController.swift in Sources */,
+				644C4A111B6F027900AA95B1 /* PDFCollectionViewController.swift in Sources */,
 				64860C1E1B677E430065AAF3 /* MyPDFReader.xcdatamodeld in Sources */,
-				64B5B5011B6E3D18000005F4 /* PDFCollectionCell.swift in Sources */,
+				644C4A131B6F029900AA95B1 /* PDFCollectionCell.swift in Sources */,
 				64B5B4FD1B6E2C11000005F4 /* PDFUtil.swift in Sources */,
 				64860C461B689C8D0065AAF3 /* DetailsViewController.swift in Sources */,
 				64860C7A1B6B7D050065AAF3 /* PDFViewCell.swift in Sources */,
+				644C4A1F1B6F660E00AA95B1 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

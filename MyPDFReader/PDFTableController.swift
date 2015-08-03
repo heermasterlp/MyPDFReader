@@ -31,7 +31,6 @@ class PDFTableController: UITableViewController, UISearchBarDelegate {
         searchBar.delegate = self
         
         // 1. Get the list of PDFs
-//        pdfFiles = listPDFFiles()
         pdfFiles = PDFUtil.getListOfPDFFiles()
         
     }
@@ -42,8 +41,6 @@ class PDFTableController: UITableViewController, UISearchBarDelegate {
         if segue.identifier == "PDFFileContents" {
         
             let indexPath = tvPDFs.indexPathForSelectedRow()!.row
-            
-            let name = pdfFiles[indexPath]
             
             ((segue.destinationViewController) as! DetailsViewController).allPDFFiles = pdfFiles
             ((segue.destinationViewController) as! DetailsViewController).indexOfPDF = indexPath
