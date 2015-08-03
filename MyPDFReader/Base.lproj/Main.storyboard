@@ -91,8 +91,8 @@
                             <rect key="frame" x="112" y="7" width="151" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
-                                <segment title="Collection"/>
-                                <segment title="Table"/>
+                                <segment title="" image="grid"/>
+                                <segment title="" image="table"/>
                             </segments>
                             <connections>
                                 <action selector="indexChanged:" destination="Lib-DM-U6R" eventType="valueChanged" id="jpd-n6-5kD"/>
@@ -289,6 +289,10 @@
             <point key="canvasLocation" x="-840.5" y="1853.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="grid" width="25" height="25"/>
+        <image name="table" width="25" height="25"/>
+    </resources>
     <inferredMetricsTieBreakers>
         <segue reference="Oq5-S5-jqm"/>
         <segue reference="943-vA-x0W"/>
