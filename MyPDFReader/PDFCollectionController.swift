@@ -1,8 +1,8 @@
 //
-//  PDFCollectionViewController.swift
+//  PDFCollectionController.swift
 //  MyPDFReader
 //
-//  Created by PeterLiu on 8/3/15.
+//  Created by PeterLiu on 8/4/15.
 //  Copyright (c) 2015 PeterLiu. All rights reserved.
 //
 
@@ -10,40 +10,33 @@ import UIKit
 
 let reuseIdentifier = "pdfCollecCell"
 
-class PDFCollectionViewController: UICollectionViewController,  UICollectionViewDelegateFlowLayout {
+class PDFCollectionController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UISearchBarDelegate {
     
+    @IBOutlet var pdfCollectionView: UICollectionView!
     
-    @IBOutlet var pdfCollectionView: UICollectionView! // Collections view
-    
+    @IBOutlet var pdfSearchBar: UISearchBar!
     var pdfFiles: [String] = [] // All pdf file name
     
     var filteredPDFFiles: [String] = [] // Filtered the pdf file name
     
     var searchActive: Bool = false
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         pdfCollectionView.delegate = self
         pdfCollectionView.dataSource = self
+        pdfSearchBar.delegate = self
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
-
+        
         // Register cell classes
         self.pdfCollectionView!.registerClass(PDFCollectionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
-        // Do any additional setup after loading the view.
-        pdfFiles = PDFUtil.getListOfPDFFiles()
         
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+        // Do any additional setup after loading the view.
+        pdfFiles = PDFUtil.getListOfPDFFiles()    }
     
-
     // Segure with paramers
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         
@@ -53,31 +46,27 @@ class PDFCollectionViewController: UICollectionViewController,  UICollectionView
             
             let indexPath = pdfCollectionView.indexPathForCell(pdfcell)
             
-            ((segue.destinationViewController) as! DetailsViewController).allPDFFiles = pdfFiles
+            ((segue.destinationViewController) as! DetailsViewController).allPDFFiles = filteredPDFFiles.count == 0 ? pdfFiles : filteredPDFFiles
             ((segue.destinationViewController) as! DetailsViewController).indexOfPDF = indexPath!.row
         }
     }
-    
-    
-    @IBAction func importPDFFileFromSystem(sender: UIBarButtonItem) {
-        
-        println("This is the import pdf file function!")
-        
-    }
-    // MARK: UICollectionViewDataSource
 
-    override func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
         //#warning Incomplete method implementation -- Return the number of sections
         return 1
     }
-
-
-    override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //#warning Incomplete method implementation -- Return the number of items in the section
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return searchActive ? filteredPDFFiles.count : pdfFiles.count
     }
-
-    override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> PDFCollectionCell {
+    
+    // The cell that is returned must be retrieved from a call to -dequeueReusableCellWithReuseIdentifier:forIndexPath:
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("collectionCell", forIndexPath: indexPath) as! PDFCollectionCell
         
@@ -93,16 +82,17 @@ class PDFCollectionViewController: UICollectionViewController,  UICollectionView
         // Pdf file thumbnail image
         if let pdfPath = NSBundle.mainBundle().pathForResource(pdfName, ofType: "pdf") {
             let pdfUrl = NSURL.fileURLWithPath(pdfPath)
-
+            
             if let pdfimage = cell.pdfImageView {
                 pdfimage.image = PDFUtil.getThumbnail(pdfUrl!, pageNumber: 1)
             }
         }
         
         cell.backgroundColor = UIColor.blackColor()
-    
+        
         return cell
     }
+    
     
     /* Search Bar Actions */
     func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
@@ -115,7 +105,6 @@ class PDFCollectionViewController: UICollectionViewController,  UICollectionView
         if filteredPDFFiles.count == 0 {
             searchActive = false
         } else {
-            println("\(filteredPDFFiles.count)")
             searchActive = true
         }
         self.pdfCollectionView.reloadData()
@@ -133,7 +122,7 @@ class PDFCollectionViewController: UICollectionViewController,  UICollectionView
     // called when keyboard search button pressed
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchActive = false
-       
+        
     }
     // called when cancel button pressed
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
@@ -141,35 +130,13 @@ class PDFCollectionViewController: UICollectionViewController,  UICollectionView
         
     }
 
-
-    // MARK: UICollectionViewDelegate
-
     /*
-    // Uncomment this method to specify if the specified item should be highlighted during tracking
-    override func collectionView(collectionView: UICollectionView, shouldHighlightItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
+    // MARK: - Navigation
 
-    /*
-    // Uncomment this method to specify if the specified item should be selected
-    override func collectionView(collectionView: UICollectionView, shouldSelectItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return true
-    }
-    */
-
-    /*
-    // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
-    override func collectionView(collectionView: UICollectionView, shouldShowMenuForItemAtIndexPath indexPath: NSIndexPath) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, canPerformAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) -> Bool {
-        return false
-    }
-
-    override func collectionView(collectionView: UICollectionView, performAction action: Selector, forItemAtIndexPath indexPath: NSIndexPath, withSender sender: AnyObject?) {
-    
+    // In a storyboard-based application, you will often want to do a little preparation before navigation
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        // Get the new view controller using segue.destinationViewController.
+        // Pass the selected object to the new view controller.
     }
     */
 

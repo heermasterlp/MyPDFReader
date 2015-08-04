@@ -42,7 +42,7 @@ class PDFTableController: UITableViewController, UISearchBarDelegate {
         
             let indexPath = tvPDFs.indexPathForSelectedRow()!.row
             
-            ((segue.destinationViewController) as! DetailsViewController).allPDFFiles = pdfFiles
+            ((segue.destinationViewController) as! DetailsViewController).allPDFFiles = filteredPDFFiles.count == 0 ? pdfFiles : filteredPDFFiles
             ((segue.destinationViewController) as! DetailsViewController).indexOfPDF = indexPath
         }
     }

@@ -34,9 +34,20 @@ class DetailsViewController: UIViewController {
         var swipeGesture = UISwipeGestureRecognizer(target: self, action: "handleSwipeGesture:")
         self.view.addGestureRecognizer(swipeGesture)
         
-
+        
         // Display the pdf file
         displayPDFFile()
+        
+        // The initial status of previous/next button
+        if indexOfPDF == 0 {
+            self.previousPDFFileButton.enabled = false
+            self.nextPDFFileButton.enabled = true
+        }
+        
+        if indexOfPDF == allPDFFiles.count - 1 {
+            self.nextPDFFileButton.enabled = false
+            self.previousPDFFileButton.enabled = true
+        }
         
     }
     

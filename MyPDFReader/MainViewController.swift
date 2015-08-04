@@ -27,7 +27,7 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
-    /* Collection / Table switch  */
+    /* Collection view / Table view switch  */
     @IBAction func indexChanged(sender: UISegmentedControl) {
         var newController = storyboard?.instantiateViewControllerWithIdentifier(viewControllerIdentifiers[sender.selectedSegmentIndex]) as! UIViewController
         let oldController = childViewControllers.last as! UIViewController
@@ -42,6 +42,10 @@ class MainViewController: UIViewController {
         })
     }
     
+    /* Import the pdf document */
+    @IBAction func importPDFDocuments(sender: AnyObject) {
+        println("Import the pdf document")
+    }
         /*
     // MARK: - Navigation
 

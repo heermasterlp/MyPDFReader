@@ -12,8 +12,10 @@ class PDFCollectionCell: UICollectionViewCell {
     
 
     @IBOutlet var pdfImageView: UIImageView!
+
     
     
     @IBOutlet var pdfLabel: UILabel!
+   
 
 }
