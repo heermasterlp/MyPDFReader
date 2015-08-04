@@ -15,10 +15,6 @@ class PDFCollectionViewController: UICollectionViewController,  UICollectionView
     
     @IBOutlet var pdfCollectionView: UICollectionView! // Collections view
     
-    
-    
-    
-    
     var pdfFiles: [String] = [] // All pdf file name
     
     var filteredPDFFiles: [String] = [] // Filtered the pdf file name
@@ -29,8 +25,6 @@ class PDFCollectionViewController: UICollectionViewController,  UICollectionView
         super.viewDidLoad()
         pdfCollectionView.delegate = self
         pdfCollectionView.dataSource = self
-        
-//        pdfSearchBar.delegate = self
         
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -86,7 +80,7 @@ class PDFCollectionViewController: UICollectionViewController,  UICollectionView
     override func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> PDFCollectionCell {
         
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("collectionCell", forIndexPath: indexPath) as! PDFCollectionCell
-        println("This is load cell")
+        
         // Configure the cell
         // PDF file name
         
@@ -130,22 +124,21 @@ class PDFCollectionViewController: UICollectionViewController,  UICollectionView
     // called when text starts editing
     func searchBarTextDidBeginEditing(searchBar: UISearchBar) {
         searchActive = true
-        println("begin edit true")
     }
     // called when text ends editing
     func searchBarTextDidEndEditing(searchBar: UISearchBar) {
         searchActive = false
-        println("end false")
+        
     }
     // called when keyboard search button pressed
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         searchActive = false
-        println("search false")
+       
     }
     // called when cancel button pressed
     func searchBarCancelButtonClicked(searchBar: UISearchBar) {
         searchActive = false
-        println("cancel false")
+        
     }
 
 

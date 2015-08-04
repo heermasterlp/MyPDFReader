@@ -27,6 +27,7 @@ class MainViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    /* Collection / Table switch  */
     @IBAction func indexChanged(sender: UISegmentedControl) {
         var newController = storyboard?.instantiateViewControllerWithIdentifier(viewControllerIdentifiers[sender.selectedSegmentIndex]) as! UIViewController
         let oldController = childViewControllers.last as! UIViewController
@@ -39,8 +40,6 @@ class MainViewController: UIViewController {
             oldController.removeFromParentViewController()
             newController.didMoveToParentViewController(self)
         })
-        
-
     }
     
         /*
