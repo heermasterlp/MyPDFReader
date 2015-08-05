@@ -30,6 +30,7 @@ class PDFCollectionController: UIViewController, UICollectionViewDataSource, UIC
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
         
+        // Style
         
         // Register cell classes
         self.pdfCollectionView!.registerClass(PDFCollectionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
