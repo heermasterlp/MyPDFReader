@@ -34,7 +34,9 @@ class DetailsViewController: UIViewController {
         var swipeGesture = UISwipeGestureRecognizer(target: self, action: "handleSwipeGesture:")
         self.view.addGestureRecognizer(swipeGesture)
         
-        
+        // Style 
+        self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
+        self.navigationController?.navigationBar.titleTextAttributes = [NSForegroundColorAttributeName: UIColor.purpleColor()]
         // Display the pdf file
         displayPDFFile()
         
@@ -56,6 +58,7 @@ class DetailsViewController: UIViewController {
         
         // Set the title of view controller
         self.title = "\(allPDFFiles[indexOfPDF] as String ) (\(self.indexOfPDF + 1) / \(self.allPDFFiles.count))"
+        
         
         // load the pdf file
         if let pdfPath = NSBundle.mainBundle().pathForResource(allPDFFiles[indexOfPDF], ofType: "pdf"){

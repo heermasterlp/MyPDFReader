@@ -20,8 +20,13 @@ class MainViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-        // Style 
+        // Style
+        let golbalGreen: UIColor = UIColor(red: 33 / 255.0, green: 197 / 255.0, blue: 180 / 255.0, alpha: 0.5)
         
+        self.view.backgroundColor = UIColor.greenColor().colorWithAlphaComponent(0.5)
+        
+        self.navigationController?.navigationBar.barTintColor = golbalGreen
+        self.navigationController?.toolbar.barTintColor = golbalGreen
     }
 
     override func didReceiveMemoryWarning() {

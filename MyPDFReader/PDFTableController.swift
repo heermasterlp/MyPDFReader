@@ -103,8 +103,8 @@ class PDFTableController: UITableViewController, UISearchBarDelegate {
             let pdfUrl = NSURL.fileURLWithPath(pdfPath)
             cell.pdfThumbnailsImage.image = PDFUtil.getThumbnail(pdfUrl!, pageNumber: 1)
         }
-        
-        cell.backgroundColor = indexPath.row % 2 == 0 ? UIColor.whiteColor() : UIColor.lightGrayColor()
+        let cellBGColor = UIColor(red: 33 / 250.0, green: 197 / 250.0, blue: 180 / 250.0, alpha: 0.1)
+        cell.backgroundColor = indexPath.row % 2 == 0 ? UIColor.whiteColor() : cellBGColor
         
         return cell
     }

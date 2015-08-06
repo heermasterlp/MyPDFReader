@@ -73,7 +73,7 @@
                         <viewControllerLayoutGuide type="bottom" id="7ec-oV-CuS"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xch-SE-oUl">
-                        <rect key="frame" x="0.0" y="64" width="375" height="559"/>
+                        <rect key="frame" x="0.0" y="94" width="375" height="559"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0fw-oz-6Db">
@@ -88,6 +88,7 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem systemItem="add" id="WlQ-un-dx6">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="importPDFDocuments:" destination="Lib-DM-U6R" id="jEU-l7-1eq"/>
                             </connections>
@@ -96,12 +97,13 @@
                     <navigationItem key="navigationItem" id="00B-Fo-EzM" colorLabel="IBBuiltInLabel-Green">
                         <nil key="title"/>
                         <segmentedControl key="titleView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bar" selectedSegmentIndex="0" id="1fx-Oj-BAN">
-                            <rect key="frame" x="112" y="7" width="151" height="30"/>
+                            <rect key="frame" x="8" y="7" width="359" height="30"/>
                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             <segments>
                                 <segment title="" image="grid"/>
                                 <segment title="" image="table"/>
                             </segments>
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="indexChanged:" destination="Lib-DM-U6R" eventType="valueChanged" id="jpd-n6-5kD"/>
                             </connections>
@@ -211,12 +213,14 @@
                     </view>
                     <toolbarItems>
                         <barButtonItem title="Previous" id="hXW-Oc-BPr">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="previousPDFFileClicked:" destination="ieL-Lx-mEw" id="7al-Bg-y9N"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem style="plain" systemItem="flexibleSpace" id="5yU-gf-Y6G"/>
                         <barButtonItem title="Next" id="ao4-we-Xgv">
+                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             <connections>
                                 <action selector="nextPDFFileClicked:" destination="ieL-Lx-mEw" id="CuU-Ir-tAd"/>
                             </connections>

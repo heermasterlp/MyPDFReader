@@ -31,7 +31,7 @@ class PDFCollectionController: UIViewController, UICollectionViewDataSource, UIC
         // self.clearsSelectionOnViewWillAppear = false
         
         // Style
-        
+//        self.view.backgroundColor = UIColor.greenColor().colorWithAlphaComponent(0.5)
         // Register cell classes
         self.pdfCollectionView!.registerClass(PDFCollectionCell.self, forCellWithReuseIdentifier: reuseIdentifier)
         
@@ -88,8 +88,8 @@ class PDFCollectionController: UIViewController, UICollectionViewDataSource, UIC
                 pdfimage.image = PDFUtil.getThumbnail(pdfUrl!, pageNumber: 1)
             }
         }
-        
-        cell.backgroundColor = UIColor.blackColor()
+        let cellBGColor = UIColor(red: 139 / 250.0, green: 76 / 250.0, blue: 57 / 250.0, alpha: 0.5)
+        cell.backgroundColor = cellBGColor
         
         return cell
     }
