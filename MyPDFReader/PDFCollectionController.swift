@@ -85,7 +85,7 @@ class PDFCollectionController: UIViewController, UICollectionViewDataSource, UIC
             let pdfUrl = NSURL.fileURLWithPath(pdfPath)
             
             if let pdfimage = cell.pdfImageView {
-                pdfimage.image = PDFUtil.getThumbnail(pdfUrl!, pageNumber: 1)
+                pdfimage.image = PDFUtil.getThumbnail(pdfUrl, pageNumber: 1)
             }
         }
         let cellBGColor = UIColor(red: 139 / 250.0, green: 76 / 250.0, blue: 57 / 250.0, alpha: 0.5)

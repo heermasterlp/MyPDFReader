@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6435CBEE1BDDCB9500B4076B /* 0026-1.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 6435CBED1BDDCB9500B4076B /* 0026-1.pdf */; settings = {ASSET_TAGS = (); }; };
 		644C4A131B6F029900AA95B1 /* PDFCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644C4A121B6F029900AA95B1 /* PDFCollectionCell.swift */; };
 		644C4A1F1B6F660E00AA95B1 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644C4A1E1B6F660E00AA95B1 /* MainViewController.swift */; };
 		644C4A2A1B70D73D00AA95B1 /* PDFCollectionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644C4A291B70D73D00AA95B1 /* PDFCollectionController.swift */; };
@@ -18,7 +19,6 @@
 		64860C281B677E430065AAF3 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 64860C261B677E430065AAF3 /* LaunchScreen.xib */; };
 		64860C341B677E430065AAF3 /* MyPDFReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860C331B677E430065AAF3 /* MyPDFReaderTests.swift */; };
 		64860C3E1B6783240065AAF3 /* PDFTableController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860C3D1B6783240065AAF3 /* PDFTableController.swift */; };
-		64860C401B6784250065AAF3 /* 0001.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 64860C3F1B6784250065AAF3 /* 0001.pdf */; };
 		64860C431B6895FA0065AAF3 /* iPhone 6 Size Comparison.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 64860C411B6895FA0065AAF3 /* iPhone 6 Size Comparison.pdf */; };
 		64860C441B6895FA0065AAF3 /* iPhone6_preorder_picker.pdf in Resources */ = {isa = PBXBuildFile; fileRef = 64860C421B6895FA0065AAF3 /* iPhone6_preorder_picker.pdf */; };
 		64860C461B689C8D0065AAF3 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64860C451B689C8D0065AAF3 /* DetailsViewController.swift */; };
@@ -37,6 +37,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		6435CBED1BDDCB9500B4076B /* 0026-1.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "0026-1.pdf"; sourceTree = "<group>"; };
 		644C4A121B6F029900AA95B1 /* PDFCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = PDFCollectionCell.swift; path = ../PDFCollectionCell.swift; sourceTree = "<group>"; };
 		644C4A1E1B6F660E00AA95B1 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		644C4A291B70D73D00AA95B1 /* PDFCollectionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFCollectionController.swift; sourceTree = "<group>"; };
@@ -52,7 +53,6 @@
 		64860C321B677E430065AAF3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		64860C331B677E430065AAF3 /* MyPDFReaderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPDFReaderTests.swift; sourceTree = "<group>"; };
 		64860C3D1B6783240065AAF3 /* PDFTableController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PDFTableController.swift; sourceTree = "<group>"; };
-		64860C3F1B6784250065AAF3 /* 0001.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = 0001.pdf; sourceTree = "<group>"; };
 		64860C411B6895FA0065AAF3 /* iPhone 6 Size Comparison.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = "iPhone 6 Size Comparison.pdf"; sourceTree = "<group>"; };
 		64860C421B6895FA0065AAF3 /* iPhone6_preorder_picker.pdf */ = {isa = PBXFileReference; lastKnownFileType = image.pdf; path = iPhone6_preorder_picker.pdf; sourceTree = "<group>"; };
 		64860C451B689C8D0065AAF3 /* DetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
@@ -170,9 +170,9 @@
 		64860C781B6B58870065AAF3 /* Documents */ = {
 			isa = PBXGroup;
 			children = (
+				6435CBED1BDDCB9500B4076B /* 0026-1.pdf */,
 				64860C411B6895FA0065AAF3 /* iPhone 6 Size Comparison.pdf */,
 				64860C421B6895FA0065AAF3 /* iPhone6_preorder_picker.pdf */,
-				64860C3F1B6784250065AAF3 /* 0001.pdf */,
 			);
 			name = Documents;
 			sourceTree = "<group>";
@@ -221,6 +221,8 @@
 		64860C0D1B677E430065AAF3 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0700;
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = PeterLiu;
 				TargetAttributes = {
@@ -260,8 +262,8 @@
 				64860C231B677E430065AAF3 /* Main.storyboard in Resources */,
 				64860C441B6895FA0065AAF3 /* iPhone6_preorder_picker.pdf in Resources */,
 				64860C431B6895FA0065AAF3 /* iPhone 6 Size Comparison.pdf in Resources */,
-				64860C401B6784250065AAF3 /* 0001.pdf in Resources */,
 				64860C281B677E430065AAF3 /* LaunchScreen.xib in Resources */,
+				6435CBEE1BDDCB9500B4076B /* 0026-1.pdf in Resources */,
 				64860C251B677E430065AAF3 /* Images.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

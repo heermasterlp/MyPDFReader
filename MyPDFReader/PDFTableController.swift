@@ -40,7 +40,7 @@ class PDFTableController: UITableViewController, UISearchBarDelegate {
         
         if segue.identifier == "PDFFileContents" {
         
-            let indexPath = tvPDFs.indexPathForSelectedRow()!.row
+            let indexPath = tvPDFs.indexPathForSelectedRow!.row
             
             ((segue.destinationViewController) as! DetailsViewController).allPDFFiles = filteredPDFFiles.count == 0 ? pdfFiles : filteredPDFFiles
             ((segue.destinationViewController) as! DetailsViewController).indexOfPDF = indexPath
@@ -49,7 +49,7 @@ class PDFTableController: UITableViewController, UISearchBarDelegate {
     
     // Import the pdf file from system
     @IBAction func importPDFButton(sender: UIBarButtonItem) {
-        println("Add button is clicked!")
+        print("Add button is clicked!")
         
     }
     override func didReceiveMemoryWarning() {
@@ -61,15 +61,15 @@ class PDFTableController: UITableViewController, UISearchBarDelegate {
     func listPDFFiles() -> [String] {
         
         var result: [String] = []
-        if let items = fm.contentsOfDirectoryAtPath(mainPath, error: nil) as? [String] {
+        if let items = (try? fm.contentsOfDirectoryAtPath(mainPath)) as [String]! {
             for item in items {
                 if item.hasSuffix("pdf") {
                     // Add the file name
-                    result.append((item as NSString).substringWithRange(NSMakeRange(0, count(item) - 4)))
+                    result.append((item as NSString).substringWithRange(NSMakeRange(0, item.characters.count - 4)))
                 }
             }
         } else {
-            println("No pdf files existed!")
+            print("No pdf files existed!")
         }
         return result
     }
@@ -101,7 +101,7 @@ class PDFTableController: UITableViewController, UISearchBarDelegate {
         if let pdfPath = NSBundle.mainBundle().pathForResource(pdfName, ofType: "pdf"){
             
             let pdfUrl = NSURL.fileURLWithPath(pdfPath)
-            cell.pdfThumbnailsImage.image = PDFUtil.getThumbnail(pdfUrl!, pageNumber: 1)
+            cell.pdfThumbnailsImage.image = PDFUtil.getThumbnail(pdfUrl, pageNumber: 1)
         }
         let cellBGColor = UIColor(red: 33 / 250.0, green: 197 / 250.0, blue: 180 / 250.0, alpha: 0.1)
         cell.backgroundColor = indexPath.row % 2 == 0 ? UIColor.whiteColor() : cellBGColor

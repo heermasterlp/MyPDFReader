@@ -27,11 +27,11 @@ class DetailsViewController: UIViewController {
         
         // Gesture
         // Pinch gesture
-        var pinchGesture = UIPinchGestureRecognizer(target: self, action: "handlePinchGesture:")
+        let pinchGesture = UIPinchGestureRecognizer(target: self, action: "handlePinchGesture:")
         self.view.addGestureRecognizer(pinchGesture)
         
         // Swipe gesture
-        var swipeGesture = UISwipeGestureRecognizer(target: self, action: "handleSwipeGesture:")
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: "handleSwipeGesture:")
         self.view.addGestureRecognizer(swipeGesture)
         
         // Style 
@@ -64,7 +64,7 @@ class DetailsViewController: UIViewController {
         if let pdfPath = NSBundle.mainBundle().pathForResource(allPDFFiles[indexOfPDF], ofType: "pdf"){
             
             let pdfUrl = NSURL.fileURLWithPath(pdfPath)
-            self.detailsWebView.loadRequest(NSURLRequest(URL: pdfUrl!))
+            self.detailsWebView.loadRequest(NSURLRequest(URL: pdfUrl))
         }
         
     }
@@ -102,7 +102,7 @@ class DetailsViewController: UIViewController {
     
     // Handle the pinch gesture
     func handlePinchGesture(gesture: UIPinchGestureRecognizer){
-        var factor = gesture.scale
+        let factor = gesture.scale
         if factor > 1 {
             // Enlarge
             detailsWebView.transform = CGAffineTransformMakeScale(lastScaleFactor + factor - 1, lastScaleFactor + factor - 1)
@@ -121,7 +121,7 @@ class DetailsViewController: UIViewController {
     
     // handle the swipe gesture
     func handleSwipeGesture(gesture: UISwipeGestureRecognizer) {
-        var direction = gesture.direction
+        let direction = gesture.direction
         switch direction {
         case UISwipeGestureRecognizerDirection.Left:
             if self.indexOfPDF == allPDFFiles.count - 1 {
