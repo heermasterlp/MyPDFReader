@@ -36,7 +36,7 @@ class MainViewController: UIViewController {
     
     /* Collection view / Table view switch  */
     @IBAction func indexChanged(sender: UISegmentedControl) {
-        var newController = storyboard?.instantiateViewControllerWithIdentifier(viewControllerIdentifiers[sender.selectedSegmentIndex]) as UIViewController!
+        let newController = storyboard?.instantiateViewControllerWithIdentifier(viewControllerIdentifiers[sender.selectedSegmentIndex]) as UIViewController!
         let oldController = childViewControllers.last as UIViewController!
         
         oldController.willMoveToParentViewController(nil)
