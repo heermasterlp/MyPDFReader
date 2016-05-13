@@ -10,10 +10,14 @@ import UIKit
 
 class DetailsViewController: UIViewController {
 
+    
+    @IBOutlet var scrollView: UIScrollView!
+    
     @IBOutlet var detailsWebView: UIWebView!
     @IBOutlet var previousPDFFileButton: UIBarButtonItem! // Previous pdf file button
     @IBOutlet var nextPDFFileButton: UIBarButtonItem! // Next pdf file button
     
+    @IBOutlet var infoLabel: UILabel!
     var fileName = ""
     var allPDFFiles: [String] = []
     var indexOfPDF = 0 // The index of pdf file
@@ -24,6 +28,14 @@ class DetailsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        super.view.addSubview(scrollView)
+        scrollView.addSubview(detailsWebView)
+        scrollView.addSubview(infoLabel)
+        
+        // set label with multi lines
+        infoLabel.numberOfLines = 0
+        infoLabel.lineBreakMode = .ByCharWrapping
         
         // Gesture
         // Pinch gesture
@@ -51,6 +63,13 @@ class DetailsViewController: UIViewController {
             self.previousPDFFileButton.enabled = true
         }
         
+        // info detail
+        let defaults = NSUserDefaults.standardUserDefaults()
+        
+        let infoStr = defaults.valueForKey(allPDFFiles[indexOfPDF] as String)
+        
+        infoLabel.text = infoStr as? String
+        
     }
     
     // Load and display the pdf file
@@ -67,6 +86,7 @@ class DetailsViewController: UIViewController {
             self.detailsWebView.loadRequest(NSURLRequest(URL: pdfUrl))
         }
         
+        //
     }
     
    
